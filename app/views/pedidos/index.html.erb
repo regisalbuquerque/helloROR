@@ -1,0 +1,23 @@
+<h1>Listing Pedidos</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @pedidos.each do |pedido| %>
+    <tr>
+      <td><%= pedido.title %></td>
+      <td><%= pedido.text %></td>
+      <td><%= link_to 'Show', pedido_path(pedido) %></td>
+      <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
+      <td><%= link_to 'Destroy', pedido_path(pedido),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Novo Pedido', new_pedido_path %>

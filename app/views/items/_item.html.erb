@@ -1,0 +1,16 @@
+
+<p>
+    <strong>Item:</strong>
+    <%= item.item %>
+</p>
+
+<p>
+    <strong>Descrição:</strong>
+    <%= item.descricao %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Item', [item.pedido, item],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

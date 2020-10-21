@@ -1,0 +1,13 @@
+<%= form_with(model: [ @pedido, @pedido.items.build ], local: true) do |form| %>
+    <p>
+      <%= form.label :item %><br>
+      <%= form.text_field :item %>
+    </p>
+    <p>
+      <%= form.label :descricao %><br>
+      <%= form.text_area :descricao %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

@@ -1,0 +1,19 @@
+
+<p>
+<strong>Title:</strong>
+<%= @pedido.title %>
+</p>
+
+<p>
+<strong>Text:</strong>
+<%= @pedido.text %>
+</p>
+
+<h2>Itens</h2>
+<%= render @pedido.items  %>
+
+<h2>Add a Item:</h2>
+<%= render 'items/form' %>
+
+<%= link_to 'Edit', edit_pedido_path(@pedido) %> |
+<%= link_to 'Voltar', pedidos_path %>
